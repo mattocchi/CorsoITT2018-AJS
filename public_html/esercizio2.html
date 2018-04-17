@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="miaApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script>
+            /*
+             * funzione di Angular per la creazione di un Modulo
+             */
+            angular.module('miaApp', [])
+            /*
+             * .controller una funzione del modulo Angular definisce un nuovo controller
+             * - una string che definisce il nome del controller
+             * - una funzione che determina il comportamento del controller
+             */
+            .controller('mioController', function($scope, $timeout) {
+                var aggiornaOrologio = function() {
+                $scope.orologio = new Date();
+                $timeout(function() {
+                    aggiornaOrologio();
+                    }, 1000);
+                };
+                aggiornaOrologio();
+            });
+        </script>
+    </head>
+    <body>
+        <div ng-controller="mioController">
+            <h1>Hello {{ orologio }}</h1>
+        </div>
+    </body>
+</html>

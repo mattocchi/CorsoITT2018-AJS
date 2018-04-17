@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html ng-app>
+<html ng-app="miaApp">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -12,8 +12,12 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     </head>
     <body>
-        <!-- controller implicito -->
-        <input ng-model="nome" type="text" placeholder="tuo nome">
-        <h1>Hello {{ nome }}</h1>
+        <div ng-controller="PrimoController">
+            <h4>Il piu semplice programma contatore</h4>
+            <button ng-click="aggiungi(1)" class="button">Add</button>
+            <a ng-click="sottrai(1)" class="button alert">Subtract</a>
+            <h4>Conteggio corrente: {{ contatore }}</h4>
+        </div>
+        <script type="text/javascript" src="esercizio4.js"></script>
     </body>
 </html>
