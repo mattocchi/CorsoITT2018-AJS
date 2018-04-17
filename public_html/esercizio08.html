@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <div class="container">
+            <form name="signup_form" novalidate autocomplete="off">
+                <fieldset>
+                    <legend>Registrazione</legend>
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label>Specifica uno username</label>
+                            <input type="text"
+                                   placeholder="nome utente"
+                                   name="name"
+                                   ng-model="utente.name"
+                                   ng-minlength=3
+                                   ng-maxlength=20 required />
+                            
+                            <div class="alert alert-danger"
+                                 ng-show="signup_form.name.$dirty && signup_form.name.$invalid">
+                                <small class="error"
+                                       ng-show="signup_form.name.$error.required">
+                                    Username obbligatorio.
+                                </small>
+                                <small class="error"
+                                       ng-show="signup_form.name.$error.minlength">
+                                    Username deve essere di almeno 3 caratteri
+                                </small>
+                                <small class="error"
+                                       ng-show="signup_form.name.$error.maxlength">
+                                    Username non deve essere più di 20 caratteri
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" ng-disabled="signup_form.$invalid">Invia</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

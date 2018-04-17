@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="miaApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+        <style>
+            .odd {
+                background-color: blue;
+            }
+            .even {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ng-class="{even: !$even, odd: !$odd}" -->
+        <ul ng-controller="PersoneController">
+            <li ng-repeat="persona in elencoPersone">
+                {{persona.nome}} vive a {{persona.citta}}
+            </li>
+        </ul>
+
+        <script type="text/javascript">
+            var app = angular.module('miaApp', [])
+            app.controller('PersoneController', function ($scope) {
+                $scope.elencoPersone = [
+                    {nome: "Tizio", citta: "Thiene"},
+                    {nome: "Caio", citta: "Schio"}
+                ];
+            })
+        </script>
+
+    </body>
+</html>

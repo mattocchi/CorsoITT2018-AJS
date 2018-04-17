@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="miaApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <style>
+            header {
+                border: 1px solid lightblue;
+                margin: 10px
+            }
+            .content {
+                border: 1px solid green;
+                margin: 10px
+            }
+            footer {
+                border: 1px solid darkblue;
+                margin: 10px
+            }
+        </style>
+    </head>
+    <body>
+
+        <header ng-controller="MainController">
+            <h1>Intestazione con MENU</h1>
+            <ul>
+                <li><a href="#!/">Pagina1</a></li>
+                <li><a href="#!/p2">Pagina2</a></li>
+                <li><a href="#!/p3">Pagina3</a></li>
+            </ul>
+            <input type="text" ng-model="username"></input>
+            
+            <button ng-click="memorizza()">Login</button>
+            {{mioServizio}}
+        </header>
+        
+        <div class="content">
+            <div ng-view></div>
+        </div>
+        
+        <footer>
+            <h5>Pie di Pagina</h5>
+        </footer>
+
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="app.services.js"></script>
+    </body>
+</html>

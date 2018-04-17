@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="miaApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <h1>Intestazione con MENU</h1>
+            <ul>
+                <li><a href="#!/">HOME</a></li>
+                <li><a href="#!/red">RED</a></li>
+                <li><a href="#!/blue">BLUE</a></li>
+                <li><a href="#!/green">GREEN</a></li>
+            </ul>
+        </header>
+        
+        <div class="content">
+            <div ng-view></div>
+        </div>
+        
+        <footer>
+            <h5>Pie di Pagina</h5>
+        </footer>
+
+
+        <script type="text/javascript">
+            // NOTA: nuova dipendenza
+            var app = angular.module('miaApp', ["ngRoute"])
+
+            app.config(function ($routeProvider) {
+                $routeProvider
+                    .when("/", {
+                        templateUrl: "esercizio13/main.html"
+                    })
+                    .when("/red", {
+                        templateUrl: "esercizio13/red.html"
+                    })
+                    .when("/green", {
+                        templateUrl: "esercizio13/green.html"
+                    })
+                    .when("/blue", {
+                        templateUrl: "esercizio13/blue.html"
+                    });
+            });
+        </script>
+
+    </body>
+</html>
