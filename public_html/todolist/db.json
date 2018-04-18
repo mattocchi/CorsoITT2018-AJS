@@ -1,0 +1,27 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "descrizione": "task1",
+      "author": "ma"
+    },
+    {
+      "id": 2,
+      "descrizione": "task2",
+      "author": "ma"
+    },
+    {
+      "id": 3,
+      "descrizione": "task3",
+      "author": "ma"
+    },
+    {
+      "id": 4,
+      "descrizione": "task4",
+      "author": "ma"
+    }
+  ],
+  "profile": {
+    "name": "todosapp"
+  }
+}
