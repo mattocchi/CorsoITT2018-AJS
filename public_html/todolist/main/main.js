@@ -1,4 +1,4 @@
-app.controller('MainController', ['$scope', 'TodoService', function ($scope, todoService) {
+app.controller('MainController', ['$scope', '$http', 'TodoService', function ($scope, $http, todoService) {
     // $scope.todos = [
     //     { descrizione: 'aaa' },
     //     { descrizione: 'bbb' },
@@ -6,4 +6,12 @@ app.controller('MainController', ['$scope', 'TodoService', function ($scope, tod
     // ]
 
     $scope.todos = todoService.todos;
+
+    // gestire correttamente caricamento dati
+    $http.get('http://ufficio.aleven.it:3000/todos')
+        .then(function (response) {
+            console.log(response);
+            todoService.todos = response.data;
+            $scope.todos = todoService.todos;
+        });
 }]);
