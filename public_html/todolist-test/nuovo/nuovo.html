@@ -1,0 +1,6 @@
+<div ng-controller="NuovoCodentroller">
+    <form name="form1">
+        <input class="form-control" name="descrizione" ng-model="nuovoTodo.descrizione" ng-minlength=1 ng-maxlength=20 required placeholder="cosa c'e' da fare oggi?">
+        <button ng-click="addTodo()" ng-disabled="form1.$invalid" class="btn btn-primary">Aggiungi Todo</button>
+    </form>
+</div>

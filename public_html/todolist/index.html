@@ -6,41 +6,27 @@ and open the template in the editor.
 -->
 <html ng-app="todoApp">
     <head>
-        <title>TODO supply a title</title>
+        <title>TODOLIST</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-
+        <script src="angular.min.js"></script>
+        <script src="angular-route.js"></script>
         <script src="app.js"></script>
         <script src="app.services.js"></script>
-        <script src="components/menu.js"></script>
-        <script src="main/main.js"></script>
-        <script src="nuovo/nuovo.js"></script>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-        <style>
-            footer {
-                text-align: center;
-            }
-        </style>
     </head>
     <body>
-        <div class="container">
-            <header>
-                <h1>App TODO LIST</h1>
-                <menu></menu>
-            </header>
-
-            <div class="content">
-                <div ng-view></div>
-            </div>
-
-            <footer>
-                <span>2018 ITT Chilesotti</span>
-            </footer>
-        </div>
+        <header>
+            <h1>App TODO LIST</h1>
+            <menu></menu>
+        </header>
+        
+        <div ng-view></div>
+        
+        <footer>
+            2018 ITT Chilesotti
+        </footer>
     </body>
 </html>

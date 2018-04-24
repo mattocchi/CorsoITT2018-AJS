@@ -1,0 +1,14 @@
+<div ng-controller="MainController">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Descrizione</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="todo in todos">
+                <td>{{todo.descrizione}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

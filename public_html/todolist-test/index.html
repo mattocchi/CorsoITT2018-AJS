@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="todoApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+        <script src="app.js"></script>
+        <script src="app.services.js"></script>
+        <script src="components/menu.js"></script>
+        <script src="main/main.js"></script>
+        <script src="nuovo/nuovo.js"></script>
+
+        <style>
+            footer {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>App TODO LIST</h1>
+                <menu></menu>
+            </header> ng.
+
+            <div class="content">
+                <div ng-view></div>
+            </div>
+
+            <footer>
+                <span>&copy;2018 ITT Chilesotti</span>
+            </footer>
+        </div>
+    </body>
+</html>

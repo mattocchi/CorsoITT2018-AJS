@@ -8,10 +8,10 @@ app.controller('MainController', ['$scope', '$http', 'TodoService', function ($s
     $scope.todos = todoService.todos;
 
     // gestire correttamente caricamento dati
-    $http.get('http://ufficio.aleven.it:3000/todos')
-        .then(function (response) {
-            console.log(response);
-            todoService.todos = response.data;
-            $scope.todos = todoService.todos;
-        });
+    // $http.get('http://ufficio.aleven.it:3000/todos')
+    //     .then(function (response) {
+    //         console.log(response);
+    //         todoService.todos = response.data;
+    //         $scope.todos = todoService.todos;
+    //     });
 }]);

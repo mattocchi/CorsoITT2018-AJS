@@ -1,0 +1,6 @@
+<div ng-controller="NuovoController">
+    <form name="form1">
+        <input name="descrizione" ng-model="nuovoTodo.descrizione" ng-minlength="5" required/>
+        <button ng-click="aggiungiTodo()" ng-disabled="form1.$invalid">Aggiungi</button>
+    </form>
+</div>

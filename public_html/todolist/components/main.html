@@ -1,0 +1,14 @@
+<div ng-controller="MainController">
+    <table>
+        <thead>
+            <tr>
+                <td>Descrizione</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="elemento in todoDaFare">
+                <td>{{elemento.descrizione}}</td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
